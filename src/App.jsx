@@ -5,7 +5,9 @@ import Answer from "./componants/Answers";
 
 function App() {
   // const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent'
-  const API_KEY = "AIzaSyBZqB2vr5eP8nMVW3xk3PjuePB1QAswqZ0";
+  const API_KEY = import.meta.env.VITE_API_KEY;
+  
+  // const API = import.meta.env.API_KEY
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -29,6 +31,7 @@ function App() {
 
       return false;
     }
+    
 
     // If Valid question is exist ? THen we have to store in localstorage..
     if (question) {
@@ -88,10 +91,16 @@ function App() {
       ]);
       setLoading(false);
       setQuestion("");
+      // console.log(import.meta.env.VITE_MY_KEY);
+      
     } catch (err) {
+          
+
       console.log(err);
       setLoading(false);
       setQuestion('')
+      // console.log(import.meta.env.VITE_MY_KEY);
+
     }
   };
 
