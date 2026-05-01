@@ -5,8 +5,12 @@ import Answer from "./componants/Answers";
 
 function App() {
   // const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent'
-  const API_KEY = import.meta.env.VITE_API_KEY;
+  // const API_KEY = import.meta.env.VITE_API_KEY;
+
+  const API_KEY = 'AIzaSyAJO-5b-ZnhX7ZljJxkFyIwphST1w-7LCs';
   
+  //This is React Learning Project || We are making practice git..
+
   // const API = import.meta.env.API_KEY
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState([]);
