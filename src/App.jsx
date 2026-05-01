@@ -28,6 +28,8 @@ function App() {
   const handle_question = async () => {
     //Suppose User Press Direct Enter Without Typing Any Question Then Below Code Executes..
 
+    console.log(import.meta.env.VITE_DATA);
+    
     if (!question && !search_history) {
       console.log("Warning... Please type some question..");
 

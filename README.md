@@ -1,16 +1,62 @@
-# React + Vite
+# 🤖 AI Chat Application (React + Gemini API)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📸 Screenshots
 
-Currently, two official plugins are available:
+🚧 Work in Progress...  
+Screenshots and demo visuals will be added soon.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Overview  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A **ChatGPT-like AI web application** built using **React.js** and **Gemini API**.  
+This app allows users to interact with an AI model, receive responses, and manage recent chat history efficiently.
 
-## Expanding the ESLint configuration
+> 🎯 Focus: Clean UI, Simple Logic, Scalable Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features  
+
+- 🧠 **AI Chat System**  
+  Ask questions and get AI-generated responses  
+
+- 🧹 **Response Formatting**  
+  Clean API responses using:
+  - `split()`
+  - `regex`
+
+- 🕘 **Recent History**  
+  - Stores user queries using `localStorage`  
+  - Quick access to previous prompts  
+
+- 🎨 **Modern UI**  
+  - Built with Tailwind CSS  
+  - Responsive and minimal design  
+
+---
+
+## 🛠️ Tech Stack  
+
+| Category       | Technology        |
+|---------------|------------------|
+| Frontend      | React.js         |
+| Styling       | Tailwind CSS     |
+| API           | Gemini API       |
+| Storage       | LocalStorage     |
+| Logic         | JavaScript (Regex + Split) |
+
+---
+
+## 📂 Project Structure  
+
+/src
+├── components
+│ ├── Answer.jsx
+│
+│
+├── utils
+│ ├── responseFormatter.js
+│
+├── App.jsx
+└── logic_handler.js
