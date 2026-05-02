@@ -30,7 +30,7 @@ const Answer = ({ answer, index , total_answers, type}) => {
         ) : heading ? (
           <p className="p-2 text-base text-zinc-300 border border-zinc-800 rounded-lg bg-linear-to-r from-zinc-700 to-indigo-900/30 my-1">{modify_answer}</p>
         ) : (
-          <p className={`${type === 'q' ? 'p-1' : 'p-2 text-base text-zinc-300 border border-zinc-800 rounded-lg bg-linear-to-r from-purple-900/30 to-indigo-900/30 my-1'}`}>{modify_answer}</p>
+          <p className={`${type === 'q' ? 'p-1' : 'p-2 text-base text-zinc-300 border border-zinc-800 rounded-lg dark:bg-linear-to-r from-purple-900/30 to-indigo-900/30 bg-black  my-1'}`}>{modify_answer}</p>
         )}
       </div>
     </>
