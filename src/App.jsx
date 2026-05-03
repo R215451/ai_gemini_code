@@ -44,8 +44,41 @@ function App() {
       // This is related From localStorage Part ...
       if (localStorage.getItem("history")) {
         let history = JSON.parse(localStorage.getItem("history"));
-        localStorage.setItem("history", JSON.stringify([question, ...history]));
-        setRecentHistory([question, ...history]);
+        history = [question, ...history]
+        //Removing duplicate and case sensitive
+        // history = history.map((item)=>{
+        //   item = item.trim()
+        //   return item.charAt(0).toUpperCase()+item.slice(1)
+        // })
+        // history = [...new Set(history)]
+
+      // history = history.map((str)=>str.trim()) // history = Array of string..
+      // const seen = new Set();
+      // history = history.filter((str)=>{
+      //   let key = str.toLowerCase();
+      //   if (seen.has(key))return false
+      //   seen.add(key)
+      //   return true
+      // })
+      // history = history.map((str)=>str.charAt(0).toUpperCase()+str.slice(1))
+
+      history = history.map((str)=>{
+        str = str.trim()
+        return str.toLowerCase()
+      })
+
+      history = [...new Set(history)]
+
+      history = history.map((str)=>str.charAt(0).toUpperCase()+str.slice(1))
+      console.log(history);
+      history = history.slice(0,10)
+      console.log(history);
+      
+      
+      
+
+        localStorage.setItem("history", JSON.stringify(history));
+        setRecentHistory(history);
       } else {
         localStorage.setItem("history", JSON.stringify([question]));
         setRecentHistory([question]);
