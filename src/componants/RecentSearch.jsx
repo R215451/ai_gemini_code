@@ -7,6 +7,19 @@ const RecentSearch = ({
     localStorage.clear();
     setRecentHistory([]);
   };
+
+  const clearSearchItem = (selected_question)=>{
+    let history = JSON.parse(localStorage.getItem('history'));
+    console.log(history);
+    history = history.filter((question)=>{
+      if (question !== selected_question){
+        return question
+      }
+    })
+    localStorage.setItem('history',JSON.stringify(history))
+    setRecentHistory(history)
+    
+  }
   return (
     <>
       <div className="col-span-1 dark:bg-zinc-800 bg-amber-50 text-white p-1">
@@ -28,15 +41,29 @@ const RecentSearch = ({
         <ul className="text-left overflow-auto text-sm">
           {recentHistory &&
             recentHistory.map((question, index) => (
-              <li
-                key={index}
-                onClick={() => setSearchHistory(question)}
-                className="p-2 m-1 text-sm text-zinc-300 cursor-pointer truncate rounded-md transition-all duration-200 
+              <div className="flex justify-between">
+                <li
+                  key={index}
+                  onClick={() => setSearchHistory(question)}
+                  className=" w-full p-2 m-1 text-sm text-zinc-300 cursor-pointer truncate rounded-md transition-all duration-200 
                 dark:bg-linear-to-r from-blue-950 to-zinc-700 bg-zinc-700
                 hover:bg-linear-to-r hover:from-blue-950 hover:to-teal-700/40 hover:text-white hover:pl-3 active:bg-zinc-700"
-              >
-                {question}
-              </li>
+                >
+                  {question}
+                </li>
+                <button 
+                onClick={()=>clearSearchItem(question)} className="cursor-pointer">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#EA3323"
+                  >
+                    <path d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                  </svg>
+                </button>
+              </div>
             ))}
         </ul>
       </div>
