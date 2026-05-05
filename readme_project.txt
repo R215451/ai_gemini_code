@@ -1,61 +1,63 @@
-🚀 AI Chat Application (React + Gemini API)
-📌 Project Overview
+# 🤖 AI Chat Application (React + Gemini API)
 
-This project is a ChatGPT-like AI web application built using modern frontend technologies. It allows users to interact with an AI model, get responses, and manage conversation history efficiently.
+## 📸 Screenshots
 
-The goal of this project is to create a simple, clean, and scalable AI chat interface that can be enhanced with more advanced features in the future.
+🚧 Work in Progress...  
+Screenshots and demo visuals will be added soon.
 
+---
 
-⚙️ Tech Stack
-Frontend: React.js
-Styling: Tailwind CSS
-API: Gemini API (for AI responses)
-Storage: Local Storage (for recent history)
-Logic Handling: JavaScript (Regex + Split for response formatting)
+## 📌 Overview  
 
-✨ Features
-🧠 AI Chat System
-User can ask questions and get AI-generated responses
-Responses are fetched using Gemini API
+A **ChatGPT-like AI web application** built using **React.js** and **Gemini API**.  
+This application allows users to interact with an AI model, receive well-structured responses, and manage recent search history efficiently.
 
-Response Formatting
-Raw API response is cleaned using:
-split()
-regex
-Output is displayed in a simple and readable format
+> 🎯 Focus: Clean UI • Simple Logic • Scalable Structure
 
-🕘 Recent History
-User queries are stored using localStorage
-Displays recent searches/questions
-Helps in quick reuse of previous prompts
+---
 
-🎨 UI/UX
-Clean and responsive UI
-Styled using Tailwind CSS
-Chat-based interface similar to modern AI apps
+## 🚀 Features  
 
+- 🧠 **AI Chat System**  
+  Ask questions and get intelligent AI-generated responses in real-time  
 
-🔧 Core Functional Flow
-User enters a question
-Request sent to Gemini API
-API returns raw response
-Response processed using:
-String split
-Regex cleanup
-Clean data displayed in UI
-Question saved in localStorage
+- 🧹 **Clean Response Formatting**  
+  - Structured output using `split()` and `regex`  
+  - Improves readability of AI responses  
 
-📈 Future Improvements (You can add later)
-Authentication system
-Database integration (instead of localStorage)
-Chat saving with timestamps
-Dark/Light mode toggle
-Streaming responses (real-time typing effect)
-Multiple chat sessions
-Better response formatting (Markdown support)
+- 🕘 **Recent History Management**  
+  - Stores queries using `localStorage`  
+  - Quick access to previous searches  
+  - Dynamic UI update without refresh  
 
+- 🎨 **Modern UI & Theme Support**  
+  - Built with Tailwind CSS  
+  - Fully responsive design  
+  - Light/Dark mode toggle  
 
-📝 Notes
-Project is designed to be scalable and extendable
-Code structure allows easy addition of new features
-Focus is on clean UI + simple logic handling
+---
+
+## 🛠️ Tech Stack  
+
+| Category   | Technology        |
+|------------|------------------|
+| Frontend   | React.js         |
+| Styling    | Tailwind CSS     |
+| API        | Gemini API       |
+| Storage    | LocalStorage     |
+| Logic      | JavaScript (Regex + Split) |
+
+---
+
+## 📂 Project Structure  
+/src
+├── components
+│ ├── Answer.jsx
+│ ├── Question.jsx
+│ ├── RecentSearch.jsx
+│
+├
+│ 
+│
+├── App.jsx
+└── logic_handler.js
